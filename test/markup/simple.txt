@@ -1,0 +1,63 @@
+# string literal
+"a string"
+s'another string'
+
+# regex literal
+r'my.*regex?'
+
+# integer literal
+1
+123
+123_000
+
+# float literal
+1.1
+123.123
+123_000.123_123
+
+# boolean literal
+true
+false
+
+# timestamp literal
+t'2020-01-01T00:00:00.000Z'
+
+# null literal
+null
+
+# object literal
+{ "foo": true, "bar": 1, "baz": { "qux": "hello", "quux": null } }
+
+# array literal
+[ 1, true, "foo", null, [], [1, 2, 3] ]
+
+# variables
+foo
+foo123
+foo_bar
+_foo
+_
+
+# queries
+foo.bar
+.foo.bar
+foo[2]
+.foo[2].bar
+.foo.(bar | baz)
+
+# operations
+1 + 2
+3/4
+true || "foo"
+false && true
+
+# if statement
+if foo {
+  .bar = true
+} else { null }
+
+# function call
+foo()
+bar(1, "true")
+bar(value: foo, literals: ["bar", true])
+map_values(.) -> { |bar| upcase(bar) }

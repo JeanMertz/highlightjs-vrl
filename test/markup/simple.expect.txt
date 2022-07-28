@@ -1,0 +1,63 @@
+<span class="hljs-comment"># string literal</span>
+<span class="hljs-string">&quot;a string&quot;</span>
+<span class="hljs-string"><span class="hljs-punctuation">s&#x27;</span>another string<span class="hljs-punctuation">&#x27;</span></span>
+
+<span class="hljs-comment"># regex literal</span>
+<span class="hljs-regexp"><span class="hljs-punctuation">r&#x27;</span>my.*regex?<span class="hljs-punctuation">&#x27;</span></span>
+
+<span class="hljs-comment"># integer literal</span>
+<span class="hljs-number">1</span>
+<span class="hljs-number">123</span>
+<span class="hljs-number">123_000</span>
+
+<span class="hljs-comment"># float literal</span>
+<span class="hljs-number">1.1</span>
+<span class="hljs-number">123.123</span>
+<span class="hljs-number">123_000.123_123</span>
+
+<span class="hljs-comment"># boolean literal</span>
+<span class="hljs-literal">true</span>
+<span class="hljs-literal">false</span>
+
+<span class="hljs-comment"># timestamp literal</span>
+<span class="hljs-literal"><span class="hljs-punctuation">t&#x27;</span>2020-01-01T00:00:00.000Z<span class="hljs-punctuation">&#x27;</span></span>
+
+<span class="hljs-comment"># null literal</span>
+<span class="hljs-literal">null</span>
+
+<span class="hljs-comment"># object literal</span>
+<span class="hljs-punctuation">{</span> <span class="hljs-string">&quot;foo&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal">true</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;bar&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;baz&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span> <span class="hljs-string">&quot;qux&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;hello&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;quux&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal">null</span> <span class="hljs-punctuation">}</span> <span class="hljs-punctuation">}</span>
+
+<span class="hljs-comment"># array literal</span>
+<span class="hljs-punctuation">[</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <span class="hljs-literal">true</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;foo&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-literal">null</span><span class="hljs-punctuation">,</span> <span class="hljs-punctuation">[</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span> <span class="hljs-punctuation">[</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <span class="hljs-number">2</span><span class="hljs-punctuation">,</span> <span class="hljs-number">3</span><span class="hljs-punctuation">]</span> <span class="hljs-punctuation">]</span>
+
+<span class="hljs-comment"># variables</span>
+<span class="hljs-variable">foo</span>
+<span class="hljs-variable">foo123</span>
+<span class="hljs-variable">foo_bar</span>
+<span class="hljs-variable">_foo</span>
+<span class="hljs-variable">_</span>
+
+<span class="hljs-comment"># queries</span>
+<span class="hljs-variable">foo</span><span class="hljs-variable language_">.bar</span>
+<span class="hljs-variable language_">.foo</span><span class="hljs-variable language_">.bar</span>
+<span class="hljs-variable">foo</span><span class="hljs-punctuation">[</span><span class="hljs-number">2</span><span class="hljs-punctuation">]</span>
+<span class="hljs-variable language_">.foo</span><span class="hljs-punctuation">[</span><span class="hljs-number">2</span><span class="hljs-punctuation">]</span><span class="hljs-variable language_">.</span><span class="hljs-variable">bar</span>
+<span class="hljs-variable language_">.foo</span><span class="hljs-variable language_">.</span><span class="hljs-punctuation">(</span><span class="hljs-variable">bar</span> <span class="hljs-punctuation">|</span> <span class="hljs-variable">baz</span><span class="hljs-punctuation">)</span>
+
+<span class="hljs-comment"># operations</span>
+<span class="hljs-number">1</span> <span class="hljs-operator">+</span> <span class="hljs-number">2</span>
+<span class="hljs-number">3</span><span class="hljs-operator">/</span><span class="hljs-number">4</span>
+<span class="hljs-literal">true</span> <span class="hljs-operator">||</span> <span class="hljs-string">&quot;foo&quot;</span>
+<span class="hljs-literal">false</span> <span class="hljs-operator">&amp;&amp;</span> <span class="hljs-literal">true</span>
+
+<span class="hljs-comment"># if statement</span>
+<span class="hljs-keyword">if</span> <span class="hljs-variable">foo</span> <span class="hljs-punctuation">{</span>
+<span class="hljs-variable language_">  .bar</span> <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>
+<span class="hljs-punctuation">}</span> <span class="hljs-keyword">else</span> <span class="hljs-punctuation">{</span> <span class="hljs-literal">null</span> <span class="hljs-punctuation">}</span>
+
+<span class="hljs-comment"># function call</span>
+<span class="hljs-title function_ invoke__">foo</span><span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span>
+<span class="hljs-title function_ invoke__">bar</span><span class="hljs-punctuation">(</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;true&quot;</span><span class="hljs-punctuation">)</span>
+<span class="hljs-title function_ invoke__">bar</span><span class="hljs-punctuation">(</span><span class="hljs-symbol">value:</span> <span class="hljs-variable">foo</span><span class="hljs-punctuation">,</span> <span class="hljs-symbol">literals:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;bar&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-literal">true</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">)</span>
+<span class="hljs-title function_ invoke__">map_values</span><span class="hljs-punctuation">(</span><span class="hljs-variable language_">.</span><span class="hljs-punctuation">)</span> <span class="hljs-punctuation">-&gt;</span> <span class="hljs-punctuation">{</span> <span class="hljs-punctuation">|</span><span class="hljs-variable">bar</span><span class="hljs-punctuation">|</span> <span class="hljs-title function_ invoke__">upcase</span><span class="hljs-punctuation">(</span><span class="hljs-variable">bar</span><span class="hljs-punctuation">)</span> <span class="hljs-punctuation">}</span>
